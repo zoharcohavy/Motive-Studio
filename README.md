@@ -1,3 +1,4 @@
+**Edit, this codebase has been removed, please contact me at zoharcohavy@gmail.com if you would like more information.
 # Motive Studio
 
 A collaborative DAW for macOS, written in C++20 on [Tracktion Engine](https://github.com/Tracktion/tracktion_engine)
