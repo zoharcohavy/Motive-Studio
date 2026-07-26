@@ -31,6 +31,13 @@ build/MotiveRevi_artefacts/*
 build/MotiveRevi_artefacts/Release/*
 !build/MotiveRevi_artefacts/Release/Motive Revi.app/
 
+# --- and except the README's screenshots ---
+!docs/
+docs/*
+!docs/images/
+docs/images/*
+!docs/images/*.png
+
 # --- macOS cruft, even inside the bundle (must stay last: later rules win) ---
 .DS_Store
 **/.DS_Store
