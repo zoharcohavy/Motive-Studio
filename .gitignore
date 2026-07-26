@@ -1,0 +1,39 @@
+# ==========================================================================
+# Motive Revi — distribution repo
+#
+# Only two things are tracked:
+#   1. README.md
+#   2. the built macOS app bundle
+#      build/MotiveRevi_artefacts/Release/Motive Revi.app
+#
+# Everything else is ignored: source, vendored JUCE, both build trees,
+# test fixture directories, and all local tooling.
+#
+# NOTE ON THE STRUCTURE BELOW: git cannot re-include a file if a parent
+# directory of it is excluded. So the path down to the .app has to be
+# un-ignored one level at a time — that is what the alternating
+# "!dir/" then "dir/*" pairs are doing. Do not collapse them.
+# ==========================================================================
+
+# --- ignore everything at the repository root ---
+/*
+
+# --- except these ---
+!.gitignore
+!README.md
+
+# --- and except the built app bundle ---
+!build/
+build/*
+!build/MotiveRevi_artefacts/
+build/MotiveRevi_artefacts/*
+!build/MotiveRevi_artefacts/Release/
+build/MotiveRevi_artefacts/Release/*
+!build/MotiveRevi_artefacts/Release/Motive Revi.app/
+
+# --- macOS cruft, even inside the bundle (must stay last: later rules win) ---
+.DS_Store
+**/.DS_Store
+._*
+.Spotlight-V100
+.Trashes
